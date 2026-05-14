@@ -4,7 +4,6 @@
 
 html { scroll-behavior: smooth; }
 
-/* Prevent horizontal scroll caused by full-bleed sections */
 html, body { overflow-x: hidden; }
 
 section { scroll-margin-top: 84px; }
@@ -203,6 +202,16 @@ a {
 	flex-wrap: wrap;
 }
 
+.project-buttons {
+	width: 100%;
+}
+
+.project-buttons .btn,
+.project-buttons .btn-secondary {
+	flex: 1 1 0;
+	width: 100%;
+}
+
 .btn,
 .btn-secondary {
 	display: inline-flex;
@@ -228,14 +237,115 @@ a {
 	gap: 1.25rem;
 }
 
+.section-title {
+	padding-left: 5%;
+	color:#63866f;
+	font-size: 60px;
+	text-align: center;
+}
 .content-card {
 	padding: 1.5rem;
+}
+.content-card-projects {
+	position: relative;
+	overflow: hidden;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	margin-top: 50px;
+	width: 100vw;
+	max-width: 100vw;
+	border-radius: 0;
+	background: rgba(19, 24, 20, 0.72);
+}
+
+.projects-layout {
+	width: min(1100px, calc(100% - 3rem));
+	margin: 0 auto;
+	padding: 1.5rem 0 2rem;
+}
+
+.projects-layout .section-title {
+	padding-left: 0;
+	margin-top: 0;
 }
 
 .projects-grid {
 	display: grid;
-	gap: 1.25rem;
+	gap: 1rem;
 	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.projects-carousel {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	position: relative;
+	text-align: justify;
+}
+
+.projects-carousel button {
+	flex-shrink: 0;
+}
+
+.carousel-slide {
+	display: flex;
+	gap: 2rem;
+	align-items: stretch;
+	flex: 1;
+	min-width: 0;
+	max-width: 100%;
+}
+
+.carousel-media {
+	flex: 0 0 45%;
+}
+
+.carousel-media img {
+	width: 100%;
+	height: 360px;
+	object-fit: cover;
+	display: block;
+	border-radius: 18px;
+}
+
+.carousel-content {
+	flex: 0 0 45%;
+	max-width: 45%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 360px;
+}
+
+.carousel-content h3 {
+	margin-top: 0;
+	margin-bottom: 0.75rem;
+	font-size: 1.6rem;
+}
+
+.carousel-content p {
+	margin-bottom: 1rem;
+	color: #dcdcdc;
+}
+
+.carousel-nav {
+	background: rgba(0,0,0,0.6);
+	border: none;
+	color: #fff;
+	font-size: 1.8rem;
+	padding: 0.35rem 0.7rem;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.carousel-nav:focus { outline: 2px solid rgba(100,150,120,0.6); }
+
+@media (max-width: 800px) {
+	.carousel-slide { flex-direction: column; }
+	.carousel-media img { height: 220px; }
+	.carousel-nav { font-size: 1.4rem; }
 }
 
 .project-card {
