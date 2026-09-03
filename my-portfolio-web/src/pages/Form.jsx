@@ -20,6 +20,7 @@ export default function Form() {
     };
 
     return (
+        <section id="form" className=''>
         <div className="container">
             <h1>Contact me</h1>
 
@@ -59,5 +60,6 @@ export default function Form() {
                 </div>
             </form>
         </div>
+        </section>
     );
 }
