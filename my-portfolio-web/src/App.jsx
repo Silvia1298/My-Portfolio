@@ -3,7 +3,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+import Form from './pages/Form';
 
 export default function App() {
 	return (
@@ -13,7 +13,7 @@ export default function App() {
 				<Home />
                 <About />
 				<Projects />
-				<Contact />
+				<Form />
 			</main>
 			<Footer />
 		</div>

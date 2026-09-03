@@ -1,16 +1,16 @@
-export default function ProjectCard({ title, description, gifUrl, projectUrl, codeUrl }) {
+export default function ProjectCard({ title, description, projectUrl, githubUrl }) {
   return (
     <div className="project-card">
-      <img src={gifUrl} alt={title} className="project-image" />
+      <img src className="project-image" />
       <div className="project-info">
         <h3>{title}</h3>
         <p>{description}</p>
         <div className="project-buttons">
           <a href={projectUrl} target="_blank" rel="noopener noreferrer" className="btn">
-            Play
+            Try it out
           </a>
-          <a href={codeUrl} target="_blank" rel="noopener noreferrer" className="btn">
-            Code
+          <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+            Github page
           </a>
         </div>
       </div>

@@ -32,10 +32,10 @@ export default function Carousel({ items = [] }) {
           <p>{item.description}</p>
           <div className="project-buttons">
             <a href={item.projectUrl} target="_blank" rel="noopener noreferrer" className="btn">
-              Play
+              Try it out
             </a>
-            <a href={item.codeUrl} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-              Code
+            <a href={item.githubUrl} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+              Github Page
             </a>
           </div>
         </div>
