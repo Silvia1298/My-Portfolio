@@ -5,7 +5,7 @@ export default function Carousel({ items = [] }) {
 
   useEffect(() => {
     if (!items.length) return;
-    const id = setInterval(() => setIndex((i) => (i + 1) % items.length), 5000);
+    const id = setInterval(() => setIndex((i) => (i + 1) % items.length), 30000);
     return () => clearInterval(id);
   }, [items.length]);
 
@@ -29,7 +29,11 @@ export default function Carousel({ items = [] }) {
 
         <div className="carousel-content">
           <h3>{item.title}</h3>
-          <p>{item.description}</p>
+          {Array.isArray(item.description) ? (
+            item.description.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+          ) : (
+            <p>{item.description}</p>
+          )}
           <div className="project-buttons">
             <a href={item.projectUrl} target="_blank" rel="noopener noreferrer" className="btn">
               Try it out

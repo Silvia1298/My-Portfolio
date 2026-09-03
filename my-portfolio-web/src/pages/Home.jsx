@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react';
-import botwZelda from '../assets/botw zelda.png';
 import motivationVideo from '../assets/motivationVideo.mp4';
 import peskyKittens from '../assets/pesky Kittens.mp4';
 
 const heroSlides = [
 	{ type: 'video', src: motivationVideo },
 	{ type: 'video', src: peskyKittens },
-	{ type: 'image', src: botwZelda },
 ];
 
 export default function Home() {
